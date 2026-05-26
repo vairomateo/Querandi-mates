@@ -1,0 +1,45 @@
+{
+    "productos": [
+    {
+    "id": 1,
+    "nombre": "Mate Camionero",
+    "categoria": "mates",
+    "precio": 35000,
+    "stock": 10,
+    "descripcion": "Mate artesanal forrado en cuero.",
+    "imagen": "./imagenes/camionero.jpeg",
+    "oferta": true
+    },
+    {
+    "id": 2,
+    "nombre": "Rei Verde",
+    "categoria": "yerbas",
+    "precio": 11500,
+    "stock": 3,
+    "descripcion": "Yerba suave y equilibrada.",
+    "imagen": "./imagenes/reiverde.png",
+    "oferta": false
+    },
+    {
+    "id": 3,
+    "nombre": "Bombilla Pico Loro",
+    "categoria": "otros",
+    "precio": 9000,
+    "stock": 1,
+    "descripcion": "Bombilla de acero inoxidable.",
+    "imagen": "./imagenes/bombillon.jpg",
+    "oferta": false
+    },
+    {
+    "id": 4,
+    "nombre": "Mate Imperial",
+    "categoria": "mates",
+    "precio": 25000,
+    "stock": 0,
+    "descripcion": "Mate premium con virola de alpaca.",
+    "imagen": "./imagenes/imperial.jpeg",
+    "oferta": true
+    }
+    
+    ]
+}
