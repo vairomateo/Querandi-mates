@@ -21,6 +21,22 @@ document.addEventListener("click", e => {
     agregarProductoAlCarrito(producto.nombre, producto.precio, producto.id, producto.imagen);
 });
 
+document.getElementById("productoModal").addEventListener("show.bs.modal", e => {
+    // El trigger es el elemento que disparó el modal
+    const trigger = e.relatedTarget;
+    const id = Number(trigger.dataset.id);
+    const producto = productos.find(p => p.id === id);
+
+    document.getElementById("modalProductoNombre").textContent = producto.nombre;
+    document.getElementById("modalProductoImg").src = producto.imagen;
+    document.getElementById("modalProductoImg").alt = producto.nombre;
+    document.getElementById("modalProductoDesc").textContent = producto.descripcion;
+    document.getElementById("modalProductoPrecio").textContent = `$ ${producto.precio.toLocaleString()}`;
+    document.getElementById("modalProductoOferta").innerHTML = producto.oferta
+        ? '<span class="badge bg-danger mb-2">OFERTA</span>' : '';
+    document.getElementById("modalBtnAgregar").dataset.id = producto.id;
+});
+
 // FILTROS
 const buscador        = document.getElementById("buscador");
 const filtroCategoria = document.getElementById("filtroCategoria");
