@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $fuente-base;
+    background-color: $color-fondo;
+    color: $color-negro;
+    line-height: 1.6;
+}
+
+main {
+    flex: 1;
+}
+
+section {
+    padding: 30px 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+}
+
+// ======================
+// SWEET ALERT
+// ======================
+
+.swal2-container {
+    z-index: 99999 !important;
+}
+
+.swal2-popup {
+
+    border-radius: 12px;
+    padding: 2rem;
+
+    z-index: 99999 !important;
+
+    .swal2-input,
+    .swal2-select {
+
+        width: 100%;
+        padding: 12px;
+
+        border-radius: 8px;
+        border: 1px solid #ccc;
+
+        font-size: 1rem;
+
+        pointer-events: auto;
+
+        &:focus {
+
+            outline: none;
+            border-color: #6c5ce7;
+
+            box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.2);
+        }
+    }
+
+    .swal2-confirm {
+
+        background-color: #6c5ce7 !important;
+
+        border-radius: 8px;
+
+        padding: 10px 20px;
+
+        font-weight: 600;
+    }
+}

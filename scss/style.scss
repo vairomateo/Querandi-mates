@@ -1,0 +1,17 @@
+// BASE
+@import 'variables';
+@import 'mixins';
+@import 'global';
+
+
+// LAYOUT
+@import 'navbar';
+@import 'footer';
+@import 'hero';
+
+
+// PAGINAS
+@import 'productos';
+@import 'contacto';
+@import 'dudas';
+@import 'responsive';

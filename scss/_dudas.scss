@@ -1,0 +1,26 @@
+// _dudas.scss
+.duda {
+    padding: 1rem;
+    border: 1px solid $color-borde;
+    border-radius: .5rem;
+    margin-bottom: 1rem;
+    background-color: $color-negro;
+    transition: background-color $transicion;
+
+    &:hover {
+        background-color: lighten($color-negro, 5%);
+    }
+
+    &__summary {
+        cursor: pointer;
+        font-weight: 600;
+    }
+}
+
+.pagos__icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    height: 30px;
+}
