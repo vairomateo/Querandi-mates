@@ -81,6 +81,14 @@ a {
   color: #6F4E37;
 }
 
+.logo-nav {
+  height: 55px;
+  width: 55px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 0;
+}
+
 .logo {
   transition: transform 0.3s ease;
 }
