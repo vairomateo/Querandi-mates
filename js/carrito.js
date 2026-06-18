@@ -38,7 +38,7 @@ function guardarEnStorage() {
 // ==================== ACCIONES DE PRODUCTOS ====================
 
 export function agregarProductoAlCarrito(nombre, precio, id, imagen) {
-    const producto = { id: id || nombre, nombre, precio, imagen: imagen || '' };
+    const producto = { id, nombre, precio, imagen: imagen || '' };
     carrito = agregarAlCarrito(carrito, producto);
     guardarEnStorage();
     mostrarToast(`"${nombre}" agregado al carrito 🧉`);
@@ -236,7 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!btn) return;
         const id      = btn.dataset.id;
         const accion  = btn.dataset.accion;
-        const idFinal = isNaN(id) ? id : Number(id);
+        const idFinal = Number(id);
         if (accion === 'sumar')    cambiarCantidad(idFinal, 1);
         if (accion === 'restar')   cambiarCantidad(idFinal, -1);
         if (accion === 'eliminar') quitarProducto(idFinal);
