@@ -64,31 +64,3 @@ export function renderizarProductos(productos, contenedor) {
         contenedor.appendChild(div);
     });
 }
-
-export function renderizarCarrito(carrito, itemsCarrito, totalCarrito, contadorCarrito) {
-
-    itemsCarrito.innerHTML = "";
-
-    carrito.forEach(producto => {
-        const li = document.createElement("li");
-        li.className = "list-group-item d-flex justify-content-between align-items-center gap-3";
-        li.innerHTML = `
-            <div class="d-flex align-items-center gap-3">
-                <img src="${producto.imagen}" alt="${producto.nombre}"
-                    width="60" height="60"
-                    style="object-fit:cover; border-radius:10px;">
-                <div>
-                    <strong>${producto.nombre}</strong><br>
-                    Cantidad: ${producto.cantidad}<br>
-                    <small>$${(producto.precio * producto.cantidad).toLocaleString('es-AR')}</small>
-                </div>
-            </div>
-            <button class="btn btn-sm btn-danger btn-eliminar" data-id="${producto.id}">X</button>
-        `;
-        itemsCarrito.appendChild(li);
-    });
-
-    const total = carrito.reduce((acc, p) => acc + p.precio * p.cantidad, 0);
-    totalCarrito.textContent = `$${total.toLocaleString('es-AR')}`;
-    contadorCarrito.textContent = carrito.length;
-}

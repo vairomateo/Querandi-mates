@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -185,35 +184,43 @@ footer .footer-nav-link:hover {
   transform: scale(1.05);
 }
 
-/* ── Hero grabados ── */
+.text-querandi {
+  color: #6F4E37;
+}
+
+.border-querandi {
+  border-color: #6F4E37 !important;
+}
+
+.separador-querandi {
+  width: 25%;
+  border-color: #6F4E37 !important;
+  border-width: 3px !important;
+  opacity: 1;
+}
+
+.separador-querandi-corto {
+  width: 60px;
+  border-color: #6F4E37 !important;
+  border-width: 3px !important;
+  opacity: 1;
+}
+
 .hero-grabados {
   background: linear-gradient(135deg, #1A1A1A 0%, #4B3221 100%);
   padding: 90px 0 70px;
-  color: #fff;
+  color: #FFFFFF;
 }
-
 .hero-grabados h1 {
   font-size: 3.2rem;
   font-weight: 700;
   line-height: 1.15;
 }
-
 .hero-grabados p {
   font-size: 1.15rem;
   color: rgba(255, 255, 255, 0.85);
 }
-
-.badge-laser {
-  background-color: #6F4E37;
-  color: #fff;
-  font-size: 0.8rem;
-  padding: 5px 12px;
-  border-radius: 20px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .hero-grabados h1 {
     font-size: 2.1rem;
   }
@@ -221,45 +228,73 @@ footer .footer-nav-link:hover {
     font-size: 1rem;
   }
 }
-/* ── Materiales ── */
+
+.badge-laser {
+  background-color: #6F4E37;
+  color: #FFFFFF;
+  font-size: 0.8rem;
+  padding: 5px 12px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.video-hero {
+  max-height: 380px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+
+.seccion-materiales,
+.seccion-galeria {
+  padding: 70px 0;
+  background-color: #F5F1EB;
+}
+
+.seccion-precios {
+  padding: 70px 0;
+  background-color: #FFFFFF;
+}
+
 .material-card {
-  background: #fff;
+  background: #FFFFFF;
   border-radius: 16px;
   padding: 32px 24px;
   text-align: center;
   border: 1px solid #E5DDD5;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   height: 100%;
 }
-
 .material-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
-
 .material-card .icono {
   font-size: 2.8rem;
   color: #6F4E37;
   margin-bottom: 14px;
 }
-
 .material-card h5 {
   font-weight: 700;
   color: #1A1A1A;
   margin-bottom: 8px;
 }
-
 .material-card p {
   font-size: 0.9rem;
-  color: #666;
+  color: #5C5C5C;
   margin: 0;
 }
 
-/* ── Pasos ── */
 .seccion-pasos {
   background-color: #1A1A1A;
-  color: #fff;
+  color: #FFFFFF;
   padding: 70px 0;
+}
+
+.pasos-descripcion {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
 }
 
 .paso {
@@ -268,7 +303,6 @@ footer .footer-nav-link:hover {
   gap: 20px;
   margin-bottom: 36px;
 }
-
 .paso:last-child {
   margin-bottom: 0;
 }
@@ -284,26 +318,38 @@ footer .footer-nav-link:hover {
   justify-content: center;
   font-size: 1.3rem;
   font-weight: 700;
-  color: #fff;
+  color: #FFFFFF;
 }
 
 .paso-texto h5 {
   font-weight: 700;
   margin-bottom: 4px;
-  color: #fff;
+  color: #FFFFFF;
 }
-
 .paso-texto p {
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.95rem;
   margin: 0;
 }
 
-/* ── Galería ── */
+.galeria-img {
+  width: 100%;
+  height: 260px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 14px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+.galeria-img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+}
+
 .galeria-placeholder {
   background: #E5DDD5;
   border-radius: 14px;
-  height: 260px; /* igual que la imagen */
+  height: 260px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -313,73 +359,49 @@ footer .footer-nav-link:hover {
   font-weight: 600;
   border: 2px dashed #6F4E37;
 }
-
 .galeria-placeholder i {
   font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
-.galeria-img {
-  width: 100%;
-  height: 260px; /* igual que el placeholder */
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 14px;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-  cursor: pointer;
-}
-
-.galeria-img:hover {
-  transform: scale(1.04);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
-}
-
-/* ── Precios ── */
 .precio-card {
-  background: #fff;
+  background: #FFFFFF;
   border-radius: 16px;
   border: 2px solid #E5DDD5;
   padding: 32px 24px;
   text-align: center;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
   height: 100%;
 }
-
 .precio-card:hover {
   border-color: #6F4E37;
   box-shadow: 0 8px 24px rgba(111, 78, 55, 0.12);
 }
-
 .precio-card .precio-valor {
   font-size: 1.8rem;
   font-weight: 700;
   color: #6F4E37;
 }
-
 .precio-card h5 {
   font-weight: 700;
   color: #1A1A1A;
   margin-bottom: 12px;
 }
-
 .precio-card p {
   font-size: 0.9rem;
-  color: #666;
+  color: #5C5C5C;
 }
 
-/* ── CTA ── */
 .cta-grabados {
   background: linear-gradient(135deg, #4B3221 0%, #6F4E37 100%);
-  color: #fff;
+  color: #FFFFFF;
   padding: 70px 0;
   text-align: center;
 }
-
 .cta-grabados h2 {
   font-size: 2rem;
   font-weight: 700;
 }
-
 .cta-grabados p {
   font-size: 1.05rem;
   color: rgba(255, 255, 255, 0.85);
@@ -387,31 +409,22 @@ footer .footer-nav-link:hover {
 
 .btn-wa {
   background-color: #25D366;
-  color: #fff;
+  color: #FFFFFF;
   border: none;
   padding: 14px 36px;
   border-radius: 50px;
   font-weight: 600;
   font-size: 1rem;
-  transition: 0.3s ease;
+  transition: 0.4s ease;
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  text-decoration: none;
 }
-
 .btn-wa:hover {
   background-color: #1ebe5b;
   transform: translateY(-3px);
-  color: #fff;
-}
-
-/* ── Texto querandi color ── */
-.text-querandi {
-  color: #6F4E37;
-}
-
-.border-querandi {
-  border-color: #6F4E37 !important;
+  color: #FFFFFF;
 }
 
 .duda {

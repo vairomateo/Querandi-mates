@@ -1,84 +1,84 @@
 {
     "productos": [
-    {
-    "id": 1,
-    "nombre": "Mate Camionero",
-    "categoria": "mates",
-    "precio": 35000,
-    "stock": 10,
-    "descripcion": "Mate artesanal forrado en cuero.",
-    "imagen": "./imagenes/mate-camionero.jpeg",
-    "oferta": true
-    },
-    {
-    "id": 2,
-    "nombre": "Rei Verde",
-    "categoria": "yerbas",
-    "precio": 11500,
-    "stock": 3,
-    "descripcion": "Yerba suave y equilibrada.",
-    "imagen": "./imagenes/yerba-rei-verde.png",
-    "oferta": false
-    },
-    {
-    "id": 3,
-    "nombre": "Bombilla Pico Loro",
-    "categoria": "otros",
-    "precio": 9000,
-    "stock": 1,
-    "descripcion": "Bombilla de acero inoxidable.",
-    "imagen": "./imagenes/bombillon.jpg",
-    "oferta": false
-    },
-    {
-    "id": 4,
-    "nombre": "Mate Imperial",
-    "categoria": "mates",
-    "precio": 25000,
-    "stock": 0,
-    "descripcion": "Mate premium con virola de alpaca.",
-    "imagen": "./imagenes/mate-imperial.jpeg",
-    "oferta": true
-    },
-    {
-    "id": 5,
-    "nombre": "Baldo",
-    "categoria": "yerbas",
-    "precio": 10000,
-    "stock": 5,
-    "descripcion": "Yerba suave y equilibrada.",
-    "imagen": "./imagenes/yerba-baldo.png",
-    "oferta": true
-    },
-    {
-    "id": 6,
-    "nombre": "Mate criollo",
-    "categoria": "mates",
-    "precio": 25000,
-    "stock": 3,
-    "descripcion": "Mate artesnal.",
-    "imagen": "./imagenes/mate-criollo.jpeg",
-    "oferta": false
-    },
-    {
-    "id": 7,
-    "nombre": "Canarias",
-    "categoria": "yerbas",
-    "precio": 11000,
-    "stock": 7,
-    "descripcion": "Yerba suave y equilibrada.",
-    "imagen": "./imagenes/yerba-canarias.png",
-    "oferta": false
-    },
-    {
-    "id": 8,
-    "nombre": "Termo Stanley 800ml negro",
-    "categoria": "otros",
-    "precio": 100000,
-    "stock": 9,
-    "descripcion": "Termo stanley original.",
-    "imagen": "./imagenes/termo-stanley-negro-800ml.jpg",
-    "oferta": false
-    }
+        {
+            "id": 1,
+            "nombre": "Mate Camionero",
+            "categoria": "mates",
+            "precio": 35000,
+            "stock": 10,
+            "descripcion": "Mate artesanal forrado en cuero.",
+            "imagen": "./imagenes/mate-camionero.jpeg",
+            "oferta": true
+        },
+        {
+            "id": 2,
+            "nombre": "Rei Verde",
+            "categoria": "yerbas",
+            "precio": 11500,
+            "stock": 3,
+            "descripcion": "Yerba premium con blend especial de hierbas.",
+            "imagen": "./imagenes/yerba-rei-verde.png",
+            "oferta": false
+        },
+        {
+            "id": 3,
+            "nombre": "Bombilla Pico Loro",
+            "categoria": "otros",
+            "precio": 9000,
+            "stock": 1,
+            "descripcion": "Bombilla de acero inoxidable.",
+            "imagen": "./imagenes/bombillon.jpg",
+            "oferta": false
+        },
+        {
+            "id": 4,
+            "nombre": "Mate Imperial",
+            "categoria": "mates",
+            "precio": 25000,
+            "stock": 0,
+            "descripcion": "Mate premium con virola de alpaca.",
+            "imagen": "./imagenes/mate-imperial.jpeg",
+            "oferta": true
+        },
+        {
+            "id": 5,
+            "nombre": "Baldo",
+            "categoria": "yerbas",
+            "precio": 10000,
+            "stock": 5,
+            "descripcion": "Yerba tradicional de sabor intenso y cuerpo lleno.",
+            "imagen": "./imagenes/yerba-baldo.png",
+            "oferta": true
+        },
+        {
+            "id": 6,
+            "nombre": "Mate Criollo",
+            "categoria": "mates",
+            "precio": 25000,
+            "stock": 3,
+            "descripcion": "Mate artesanal de calabaza curada.",
+            "imagen": "./imagenes/mate-criollo.jpeg",
+            "oferta": false
+        },
+        {
+            "id": 7,
+            "nombre": "Canarias",
+            "categoria": "yerbas",
+            "precio": 11000,
+            "stock": 7,
+            "descripcion": "Yerba suave con notas herbales y baja acidez.",
+            "imagen": "./imagenes/yerba-canarias.png",
+            "oferta": false
+        },
+        {
+            "id": 8,
+            "nombre": "Termo Stanley 800ml Negro",
+            "categoria": "otros",
+            "precio": 100000,
+            "stock": 2,
+            "descripcion": "Termo Stanley original, mantiene la temperatura 24 horas.",
+            "imagen": "./imagenes/termo-stanley-negro-800ml.jpg",
+            "oferta": false
+        }
     ]
 }
