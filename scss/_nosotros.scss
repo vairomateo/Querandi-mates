@@ -1,0 +1,102 @@
+/* =========================================
+   Sección: Nosotros (_nosotros.scss)
+   ========================================= */
+
+.nosotros-page {
+    // 1. Tipografía y lectura
+    .font-heading {
+        font-family: var(--font-heading);
+        color: var(--color-dark);
+    }
+    
+    .text-gray {
+        color: var(--color-gray);
+        line-height: 1.8; // Clave para la calidez: un texto apretado agobia. Esto da "pausa".
+    }
+
+    .text-querandi {
+        color: var(--color-primary);
+    }
+
+    .text-primary-light {
+        color: var(--color-primary-light);
+    }
+
+    // 2. Fondos cálidos
+    .bg-cream {
+        background-color: var(--color-cream);
+        // Si el contenedor no es full-width, le damos un borde suave
+        border-radius: var(--radius-xl); 
+    }
+
+    // 3. Detalles estéticos (El separador del título)
+    .divider-primary {
+        width: 80px;
+        height: 4px;
+        background: var(--gradient-primary); // Usamos el gradiente que ya tenías en el :root
+        border-radius: var(--radius-full);
+        transition: width var(--transition-slow);
+        
+        // Micro-interacción: se alarga un poquito al pasar el mouse por la zona
+        &:hover {
+            width: 120px;
+        }
+    }
+
+    // 4. Tarjetas "Lo que nos hace únicos"
+    .feature-card {
+        background-color: var(--color-white);
+        border: 1px solid rgba(0, 0, 0, 0.03); // Un borde casi invisible para separar del fondo
+        border-radius: var(--radius-lg);
+        transition: var(--transition-base);
+        box-shadow: var(--shadow-sm);
+        
+        // Efecto premium al pasar el mouse
+        &:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(139, 90, 43, 0.15); // Un guiño sutil al marrón del mate
+            
+            // Animamos el ícono de adentro
+            i {
+                transform: scale(1.15);
+                color: var(--color-primary);
+            }
+        }
+
+        i {
+            transition: all var(--transition-base);
+            display: inline-block;
+        }
+    }
+
+    // 5. Utilidades visuales para las imágenes fotográficas
+    .rounded-lg {
+        border-radius: var(--radius-lg);
+    }
+
+    // Una sombra profunda pero difuminada para que las fotos "floten" cálidamente
+    .shadow-lg {
+        box-shadow: var(--shadow-lg);
+    }
+
+    // 6. Tipografía para firmas y cierres
+    .tracking-wide {
+        letter-spacing: 2px; // Le da ese aire de "sello de calidad" a la firma final
+    }
+
+    // 7. Responsive: Ajustes finos para celulares
+    @media (max-width: 991px) {
+        .display-4 {
+            font-size: 2.5rem; // Achicamos el título principal en móviles
+        }
+        
+        .feature-card {
+            padding: 2rem 1.5rem !important; // Menos padding lateral en celus
+        }
+        
+        .bg-cream {
+            border-radius: 0; // En móviles suele quedar mejor que el fondo ocupe todo el ancho
+        }
+    }
+}

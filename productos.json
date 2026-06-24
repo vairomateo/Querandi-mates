@@ -2,12 +2,12 @@
     "productos": [
         {
             "id": 1,
-            "nombre": "Mate Camionero",
+            "nombre": "Mate Imperial",
             "categoria": "mates",
             "precio": 35000,
             "stock": 10,
-            "descripcion": "Mate artesanal forrado en cuero.",
-            "imagen": "./imagenes/mate-camionero.jpeg",
+            "descripcion": "Calabaza natural con terminaciones en alpaca. La máxima expresión de elegancia.",
+            "imagen": "./imagenes/mate_imperial_negro.png",
             "oferta": true
         },
         {
@@ -22,23 +22,23 @@
         },
         {
             "id": 3,
-            "nombre": "Bombilla Pico Loro",
-            "categoria": "otros",
+            "nombre": "Bombillon",
+            "categoria": "bombillas",
             "precio": 9000,
             "stock": 1,
             "descripcion": "Bombilla de acero inoxidable.",
-            "imagen": "./imagenes/bombillon.jpg",
+            "imagen": "./imagenes/bombillon_premium.png",
             "oferta": false
         },
         {
             "id": 4,
-            "nombre": "Mate Imperial",
+            "nombre": "Mate Imperial con base",
             "categoria": "mates",
             "precio": 25000,
             "stock": 0,
-            "descripcion": "Mate premium con virola de alpaca.",
-            "imagen": "./imagenes/mate-imperial.jpeg",
-            "oferta": true
+            "descripcion": "Mate premium con virola de alpaca. Robusto y práctico, con base reforzada. Perfecto para el día a día.",
+            "imagen": "./imagenes/mate_imperial_con_base.png",
+            "oferta": false
         },
         {
             "id": 5,
@@ -52,12 +52,12 @@
         },
         {
             "id": 6,
-            "nombre": "Mate Criollo",
+            "nombre": "Mate Ranchero",
             "categoria": "mates",
             "precio": 25000,
             "stock": 3,
-            "descripcion": "Mate artesanal de calabaza curada.",
-            "imagen": "./imagenes/mate-criollo.jpeg",
+            "descripcion": "Diseño rústico de boca ancha, ideal para una cebada cómoda y duradera.",
+            "imagen": "./imagenes/mate_ranchero.png",
             "oferta": false
         },
         {
@@ -72,12 +72,42 @@
         },
         {
             "id": 8,
-            "nombre": "Termo Stanley 800ml Negro",
-            "categoria": "otros",
+            "nombre": "Termo Metalico",
+            "categoria": "termos",
             "precio": 100000,
             "stock": 2,
-            "descripcion": "Termo Stanley original, mantiene la temperatura 24 horas.",
-            "imagen": "./imagenes/termo-stanley-negro-800ml.jpg",
+            "descripcion": "Diseño rústico de boca ancha, ideal para una cebada cómoda y duradera.",
+            "imagen": "./imagenes/termo_metalico.png",
+            "oferta": false
+        },
+        {
+            "id": 9,
+            "nombre": "Termo Negro",
+            "categoria": "termos",
+            "precio": 100000,
+            "stock": 2,
+            "descripcion": "Diseño rústico de boca ancha, ideal para una cebada cómoda y duradera.",
+            "imagen": "./imagenes/termo_negro.png",
+            "oferta": false
+        },
+        {
+            "id": 10,
+            "nombre": "Mate Imperial de Algarrobo",
+            "categoria": "mates",
+            "precio": 35000,
+            "stock": 2,
+            "descripcion": "Diseño rústico de boca ancha, ideal para una cebada cómoda y duradera.",
+            "imagen": "./imagenes/imperial_algarrobo.png",
+            "oferta": false
+        },
+        {
+            "id": 11,
+            "nombre": "Mate Torpedo",
+            "categoria": "mates",
+            "precio": 40000,
+            "stock": 2,
+            "descripcion": "Diseño rústico de boca ancha, ideal para una cebada cómoda y duradera.",
+            "imagen": "./imagenes/mate_torpedo_negro.png",
             "oferta": false
         }
     ]
