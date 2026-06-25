@@ -114,8 +114,8 @@ function renderizarCarrito() {
                 : ''
             }
             <div class="flex-grow-1 min-width-0">
-                <div class="fw-semibold small text-truncate">${item.nombre}</div>
-                <div class="text-muted small">$${item.precio.toLocaleString('es-AR')} c/u</div>
+                <div class="fw-semibold small text-truncate text-white">${item.nombre}</div>
+                <div class="small text-white-50">$${item.precio.toLocaleString('es-AR')} c/u</div>
             </div>
             <div class="d-flex align-items-center gap-1">
                 <button class="btn btn-sm btn-outline-secondary px-2 py-0" data-accion="restar" data-id="${id}">−</button>
@@ -134,6 +134,7 @@ function renderizarCarrito() {
 
 // ==================== UI - CHECKOUT ====================
 
+// Reemplaza esta sección en tu archivo carrito.js
 function abrirCheckout() {
     const instancia = bootstrap.Modal.getInstance(document.getElementById('modalCarrito'));
     if (instancia) instancia.hide();
@@ -141,11 +142,15 @@ function abrirCheckout() {
     const resumen = document.getElementById('checkoutResumen');
     const totalEl = document.getElementById('checkoutTotal');
 
+    // Estructura mejorada: imagen, nombre/cantidad y precio a la derecha
     if (resumen) resumen.innerHTML = carrito.map(i => `
-        <div class="d-flex align-items-center gap-2 py-1 border-bottom">
-            ${i.imagen ? `<img src="${i.imagen}" width="36" height="36" style="object-fit:cover;border-radius:6px;flex-shrink:0">` : ''}
-            <span class="flex-grow-1 small">${i.nombre} x${i.cantidad}</span>
-            <span class="fw-bold small">$${(i.precio * i.cantidad).toLocaleString('es-AR')}</span>
+        <div class="d-flex align-items-center gap-3 py-2 border-bottom border-secondary">
+            ${i.imagen ? `<img src="${i.imagen}" width="50" height="50" style="object-fit:cover;border-radius:8px;border: 1px solid #cfa361;">` : ''}
+            <div class="flex-grow-1">
+                <div class="text-white fw-bold">${i.nombre}</div>
+                <div class="text-white-50 small">Cant: ${i.cantidad}</div>
+            </div>
+            <div class="fw-bold" style="color: #cfa361;">$${(i.precio * i.cantidad).toLocaleString('es-AR')}</div>
         </div>`
     ).join('');
 

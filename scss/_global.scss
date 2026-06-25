@@ -8,7 +8,7 @@ body {
     line-height: 1.6;
     font-family: var(--font-body);
     color: var(--color-dark);
-    background-color: var(--color-white);
+    background-color: var(--color-cream);
 }
 
 h1, h2, h3, h4 {
@@ -111,4 +111,272 @@ a {
 
         font-weight: 600;
     }
+}
+
+/* =========================================
+   Tarjetas de Productos Premium
+   ========================================= */
+
+.product-card {
+    background-color: transparent;
+    border-radius: 16px !important; /* Más redondeado */
+    overflow: hidden; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06); /* Sombra base suave */
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 15px 25px rgba(139, 90, 43, 0.15); /* Sombra más grande con un ligero tono marrón */
+    }
+
+    .card-img-wrapper {
+        position: relative;
+        
+        .card-img-top {
+            width: 100%;
+            height: 280px; 
+            object-fit: cover; 
+            border-bottom: 3px solid #C9A962; 
+        }
+    }
+
+    .modern-badge {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        padding: 0.4rem 0.8rem;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        border-radius: 4px;
+        z-index: 2;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+
+        &.gold-badge {
+            background-color: #C9A962;
+            color: #1A1A1A;
+        }
+
+        &.grey-badge {
+            background-color: #8A8A8A;
+            color: #FFFFFF;
+        }
+    }
+
+    .dark-body {
+        background-color: #2D2D2D; 
+        color: #FFFFFF;
+        padding: 1.5rem;
+        text-align: left; 
+        border-bottom-left-radius: 16px; /* Asegura que la parte de abajo también se redondee */
+        border-bottom-right-radius: 16px;
+
+        .card-title {
+            color: #FFFFFF;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .description {
+            color: #B0B0B0; 
+            font-size: 0.9rem;
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .price {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 400; /* Acá está la magia: trazo fino y delicado */
+            color: #C9A962; 
+            letter-spacing: 0.5px; /* Un poquitito de aire entre los números */
+            
+            .signo-peso {
+                font-family: 'Playfair Display', Georgia, serif;
+                font-size: 1.1rem; /* Más chico que los números */
+                font-weight: 400;
+                margin-right: 3px;
+                opacity: 0.85; /* Lo hacemos apenas más suave para que no compita */
+            }
+        }
+
+        .stock-warning {
+            font-size: 0.85rem;
+            color: #D4BC7D; 
+            font-weight: 500;
+            
+            i { margin-right: 4px; }
+        }
+
+        .btn-outline-gold {
+            background-color: transparent;
+            border: 1px solid #C9A962;
+            color: #C9A962;
+            font-weight: 600;
+            transition: 0.3s ease;
+            border-radius: 6px;
+            padding: 0.6rem;
+
+            &:hover {
+                background-color: #C9A962;
+                color: #1A1A1A;
+            }
+        }
+        
+        .btn-disabled {
+            background-color: #4A4A4A;
+            border: 1px solid #4A4A4A;
+            color: #8A8A8A;
+            cursor: not-allowed;
+            font-weight: 600;
+            padding: 0.6rem;
+            border-radius: 6px;
+        }
+    }
+}
+
+/* =========================================
+   Modal de Producto (Estilo Premium)
+   ========================================= */
+
+.modal-content {
+    background-color: #2D2D2D; /* Fondo oscuro igual que las cards */
+    border: 1px solid rgba(201, 169, 98, 0.3); /* Borde sutil dorado */
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5); /* Sombra profunda */
+    color: #FFFFFF;
+
+    .modal-header {
+        border-bottom: none; /* Quitamos la línea fea por defecto */
+        padding: 1.5rem 1.5rem 0;
+        
+        .modal-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #FFFFFF;
+        }
+
+        /* Invertimos el color de la crucecita de Bootstrap para que se vea en fondo oscuro */
+        .btn-close {
+            filter: invert(1) grayscale(100%) brightness(200%); 
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
+            
+            &:hover { 
+                opacity: 1; 
+            }
+        }
+    }
+
+    .modal-body {
+        text-align: center; /* Centramos todos los textos e imágenes */
+        padding: 2rem;
+
+        /* Hacemos la imagen más grande, centrada y con estilo */
+        img {
+            display: block;
+            margin: 0 auto 1.5rem auto; /* Centrado horizontal y margen abajo */
+            max-width: 90%; /* Más ancha */
+            height: auto;
+            border-radius: 12px;
+            border-bottom: 3px solid #C9A962; /* Línea dorada para mantener el estilo */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Descripción del producto */
+        p {
+            color: #B0B0B0; /* Gris claro elegante */
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            padding: 0 1rem; /* Un poco de aire a los costados */
+        }
+
+        /* Precio elegante en el modal */
+        .precio-modal { 
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2rem; /* Más grande que en la tarjeta */
+            font-weight: 400; /* Fino y delicado */
+            color: #C9A962;
+            letter-spacing: 0.5px;
+            margin-bottom: 0;
+            
+            .signo-peso {
+                font-family: 'Playfair Display', Georgia, serif;
+                font-size: 1.4rem; /* Más chico que el número */
+                font-weight: 400;
+                margin-right: 4px;
+                opacity: 0.85;
+            }
+        }
+    }
+
+    .modal-footer {
+        border-top: none; /* Sin línea separadora */
+        justify-content: center; /* Centramos el botón */
+        padding-bottom: 2rem;
+
+        /* Botón estilo boutique */
+        .btn {
+            background-color: transparent;
+            border: 1px solid #C9A962;
+            color: #C9A962;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 0.8rem 2.5rem; /* Botón más ancho y con más presencia */
+            border-radius: 6px;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: #C9A962;
+                color: #1A1A1A;
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(201, 169, 98, 0.2);
+            }
+        }
+    }
+}
+
+/* Eliminar fondo blanco y ajustar colores del checkout */
+#modalCheckout .modal-content {
+    background-color: #1a1a1a !important; /* Fondo oscuro */
+    color: #ffffff !important;
+    border: 1px solid #cfa361; /* Borde dorado */
+}
+
+/* Contenedor del resumen de productos */
+#checkoutResumen {
+    background-color: transparent !important; /* Quita el recuadro blanco */
+    border: none !important;
+}
+
+/* Labels arriba de los inputs */
+#modalCheckout label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #ffffff !important;
+}
+
+/* Inputs oscuros para mantener la estética */
+#modalCheckout .form-control {
+    background-color: #2d2d2d !important;
+    border: 1px solid #444 !important;
+    color: #ffffff !important;
+}
+
+/* Asegurar que el total sea dorado y no verde */
+#checkoutTotal {
+    color: #cfa361 !important;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
