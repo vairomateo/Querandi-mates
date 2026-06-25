@@ -1,102 +1,218 @@
-/* =========================================
-   Sección: Nosotros (_nosotros.scss)
-   ========================================= */
+/* ==========================================================================
+   SECCIÓN NOSOTROS - ESTILO PREMIUM CREMA Y DORADO
+   ========================================================================== */
 
-.nosotros-page {
-    // 1. Tipografía y lectura
-    .font-heading {
-        font-family: var(--font-heading);
-        color: var(--color-dark);
-    }
-    
-    .text-gray {
-        color: var(--color-gray);
-        line-height: 1.8; // Clave para la calidez: un texto apretado agobia. Esto da "pausa".
-    }
+.nosotros-main {
+    background-color: #fdfcf8 !important; /* Fondo cremita súper cálido */
+    color: #2d2d2d !important;             /* Texto base carbón oscuro para legibilidad */
+    min-height: 80vh;
 
-    .text-querandi {
-        color: var(--color-primary);
-    }
+    // --- REESCRITURA DE CLASES BOOTSTRAP PARA FONDO CLARO ---
+    // Esto evita tener que cambiar las clases en tu HTML
+    .text-white { color: #2d2d2d !important; }
+    .text-white-50 { color: #666 !important; }
+    .text-light-grey { color: #444 !important; }
+    .text-dark-grey { color: #2d2d2d !important; }
+    .text-gold { color: #cfa361 !important; }
+    .tracking-widest { letter-spacing: 2px; }
 
-    .text-primary-light {
-        color: var(--color-primary-light);
-    }
-
-    // 2. Fondos cálidos
-    .bg-cream {
-        background-color: var(--color-cream);
-        // Si el contenedor no es full-width, le damos un borde suave
-        border-radius: var(--radius-xl); 
+    /* --- Elementos Estéticos --- */
+    .gold-divider {
+        width: 60px;
+        border-bottom: 3px solid #cfa361;
     }
 
-    // 3. Detalles estéticos (El separador del título)
-    .divider-primary {
-        width: 80px;
-        height: 4px;
-        background: var(--gradient-primary); // Usamos el gradiente que ya tenías en el :root
-        border-radius: var(--radius-full);
-        transition: width var(--transition-slow);
+    .nosotros-lead {
+        max-width: 650px;
+        font-size: 1.15rem;
+    }
+
+    /* --- Imagen con Marco Desfasado --- */
+    .nosotros-img-container {
+        position: relative;
+        display: inline-block;
         
-        // Micro-interacción: se alarga un poquito al pasar el mouse por la zona
-        &:hover {
-            width: 120px;
+        .nosotros-img {
+            border: 1px solid #e8e4d8;
+            max-height: 400px;
+            object-fit: cover;
+            position: relative;
+            z-index: 2;
+        }
+
+        .gold-offset-border {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 2px solid #cfa361;
+            transform: translate(12px, 12px);
+            z-index: 1;
+            opacity: 0.5;
         }
     }
 
-    // 4. Tarjetas "Lo que nos hace únicos"
-    .feature-card {
-        background-color: var(--color-white);
-        border: 1px solid rgba(0, 0, 0, 0.03); // Un borde casi invisible para separar del fondo
-        border-radius: var(--radius-lg);
-        transition: var(--transition-base);
-        box-shadow: var(--shadow-sm);
+    /* --- Bloques de Fondo (Números, Grabados, etc.) --- */
+    .bkg-numbers {
+        background-color: #f5f2eb !important; /* Un crema apenas más oscurito para contrastar */
+        border: 1px solid #e8e4d8 !important;
+    }
+
+    /* --- El Arte del Detalle (Cajas Macro Zoom Alargadas) --- */
+    .zoom-box {
+        position: relative;
+        overflow: hidden;
+        height: 180px; /* Cambiado a formato alargado y fino */
+        border: 1px solid #e8e4d8;
+        border-radius: 8px; /* Esquinas suavizadas de catálogo premium */
+        cursor: pointer;
         
-        // Efecto premium al pasar el mouse
-        &:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-lg);
-            border-color: rgba(139, 90, 43, 0.15); // Un guiño sutil al marrón del mate
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .zoom-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 12px 15px; /* Más compacto para el nuevo formato */
+            background: linear-gradient(transparent, rgba(18, 18, 18, 0.95)) !important; // Degradé más oscuro y nítido
+            z-index: 2;
             
-            // Animamos el ícono de adentro
-            i {
-                transform: scale(1.15);
-                color: var(--color-primary);
+            h5 { 
+                font-size: 1.1rem !important;
+                color: #ffffff !important; /* Forzamos título blanco sobre el degradé */
+                margin: 0 !important;
+            }
+            
+            p {
+                font-size: 0.8rem !important;
+                color: rgba(255, 255, 255, 0.7) !important;
+                margin: 0 !important;
             }
         }
 
-        i {
-            transition: all var(--transition-base);
-            display: inline-block;
+        // Al pasar el mouse, la foto general se expande suavemente
+        &:hover img {
+            transform: scale(1.12);
         }
     }
 
-    // 5. Utilidades visuales para las imágenes fotográficas
-    .rounded-lg {
-        border-radius: var(--radius-lg);
-    }
-
-    // Una sombra profunda pero difuminada para que las fotos "floten" cálidamente
-    .shadow-lg {
-        box-shadow: var(--shadow-lg);
-    }
-
-    // 6. Tipografía para firmas y cierres
-    .tracking-wide {
-        letter-spacing: 2px; // Le da ese aire de "sello de calidad" a la firma final
-    }
-
-    // 7. Responsive: Ajustes finos para celulares
-    @media (max-width: 991px) {
-        .display-4 {
-            font-size: 2.5rem; // Achicamos el título principal en móviles
+    /* --- Enfoque macro digital exclusivo para la Virola --- */
+    .zoom-virola {
+        img {
+            object-position: 50% 39% !important; /* Centrado quirúrgico en el metal de imperial_algarrobo.jpg */
+            transform: scale(1.6); /* Encuadre inicial del zoom sin romper la imagen */
+            transition: transform 0.5s ease !important;
         }
+
+        // Micro zoom extra cuando pasan el cursor por encima
+        &:hover img {
+            transform: scale(1.8) !important;
+        }
+    }
+
+    /* --- Logos de Empresas Asociadas (Regalos Empresariales) --- */
+    .grayscale-logos {
+        img {
+            filter: grayscale(100%);
+            opacity: 0.5;
+            transition: all 0.3s ease;
+            max-height: 50px;
+            object-fit: contain;
+
+            // Al pasar el mouse, el logo de la empresa recupera su color
+            &:hover {
+                filter: grayscale(0%);
+                opacity: 1 !important;
+            }
+        }
+    }
+
+    /* --- Testimonios Estilo Chat de Instagram --- */
+    .insta-chat-box {
+        background-color: #f5f2eb !important;
+        border: 1px solid #e8e4d8 !important;
         
-        .feature-card {
-            padding: 2rem 1.5rem !important; // Menos padding lateral en celus
+        .avatar-insta {
+            width: 40px;
+            height: 40px;
+            // El degradé clásico del anillo de Stories de Instagram
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
         }
-        
-        .bg-cream {
-            border-radius: 0; // En móviles suele quedar mejor que el fondo ocupe todo el ancho
+
+        p {
+            font-style: italic;
+            color: #444 !important;
+        }
+    }
+
+    /* --- Botón de Contorno Dorado Interactivo --- */
+    .btn-outline-gold {
+        border: 1px solid #cfa361 !important;
+        color: #cfa361 !important;
+        font-weight: 600;
+        background-color: transparent;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: #cfa361 !important;
+            color: #fdfcf8 !important; /* Pinta el texto con el cremita de fondo */
+            box-shadow: 0 0 15px rgba(207, 163, 97, 0.3);
+            transform: translateY(-2px);
         }
     }
 }
+
+    /* =========================================
+    CONTENEDORES DE EMPRESAS (B2B)
+       ========================================= */
+    .client-brand-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;                  /* Más separación elegante entre logo y texto */
+        background-color: #f5f2eb;  
+        border: 1px solid #e8e4d8;
+        padding: 16px 28px;         /* Más cuerpo a la pastilla */
+        border-radius: 40px;        
+        transition: all 0.3s ease;
+        filter: grayscale(100%);    
+        opacity: 0.7;
+
+        .client-logo {
+            max-height: 58px;       /* Subimos de 24px a 38px para que tenga presencia */
+            width: auto;
+            object-fit: contain;
+        }
+
+        /* El nombre de la empresa */
+        .client-name {
+            font-size: 1.05rem;     /* Subimos un pelín para que juegue en la misma liga que el logo */
+            font-weight: 600;
+            color: #2d2d2d;
+            white-space: nowrap;    
+        }
+
+        /* CUANDO PASÁS EL MOUSE: Recupera la vida y el color original */
+        &:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            background-color: #ffffff;
+            border-color: #cfa361;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(207, 163, 97, 0.15) !important;
+        }
+    }

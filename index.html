@@ -91,7 +91,7 @@
         </div>
     <div class="modal-body text-center">
         <img id="modalProductoImg" src="" alt="" class="img-fluid rounded mb-3" style="max-height: 300px; object-fit: contain;">
-        <p id="modalProductoDesc" class="text-muted"></p>
+        <p id="modalProductoDesc" class="text-white-50"></p>
         <p class="fw-bold fs-5" id="modalProductoPrecio"></p>
         <span id="modalProductoOferta"></span>
     </div>
@@ -116,7 +116,7 @@
             </div>
             <div class="modal-footer d-flex justify-content-between align-items-center">
                 <div>
-                    <span class="text-muted small">Total:</span>
+                    <span class="text-white">Total:</span>
                     <span class="fw-bold ms-1" id="carritoTotal">$0</span>
                 </div>
                 <div class="d-flex gap-2">
@@ -134,62 +134,62 @@
 
 
 <!-- ===== MODAL CHECKOUT ===== -->
-<div class="modal fade" id="modalCheckout" tabindex="-1">
+<div class="modal fade" id="modalCheckout" tabindex="-1" data-bs-theme="dark">
     <div class="modal-dialog modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-header" style="background-color:#795548; color:#fff;">
-                <h5 class="modal-title"><i class="bi bi-bag-check me-2"></i>Finalizar compra</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        <div class="modal-content" style="background-color: #1a1a1a; color: #fff; border: 1px solid #cfa361;">
+            <div class="modal-header border-bottom border-secondary">
+                <h5 class="modal-title" style="color: #cfa361;"><i class="bi bi-bag-check me-2"></i>Finalizar compra</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body p-4">
 
-                <!-- Resumen del pedido -->
-                <h6 class="fw-bold mb-2">📦 Tu pedido:</h6>
-                <div id="checkoutResumen" class="mb-3 border rounded p-2 bg-light small"></div>
-                <div class="text-end fw-bold mb-4">
-                    Total: <span id="checkoutTotal" class="text-success fs-5">$0</span>
+                <h6 class="fw-bold mb-3 text-white"><i class="bi bi-box-seam me-2"></i>Tu pedido:</h6>
+                <div id="checkoutResumen" class="mb-4 rounded p-0 bg-transparent"></div>
+                
+                <div class="text-end fw-bold mb-5 pb-3 border-bottom border-secondary">
+                    <span class="text-white me-2">Total:</span> 
+                    <span id="checkoutTotal" style="color: #cfa361; font-size: 1.5rem;">$0</span>
                 </div>
 
-                <!-- Formulario de datos -->
-                <h6 class="fw-bold mb-3">👤 Tus datos:</h6>
+                <h6 class="fw-bold mb-4 text-white"><i class="bi bi-person-lines-fill me-2"></i>Tus datos:</h6>
 
                 <div class="mb-3">
-                    <label class="form-label small fw-semibold">Nombre completo</label>
-                    <input type="text" id="chkNombre" class="form-control form-control-sm" placeholder="Ej: Juan Pérez">
-                </div>
-
-                <div class="mb-3">
-                    <label class="form-label small fw-semibold">Email</label>
-                    <input type="email" id="chkMail" class="form-control form-control-sm" placeholder="tu@mail.com">
+                    <label class="form-label small fw-semibold text-white-50">Nombre completo</label>
+                    <input type="text" id="chkNombre" class="form-control bg-dark text-white border-secondary" placeholder="Ej: Juan Pérez">
                 </div>
 
                 <div class="mb-3">
-                    <label class="form-label small fw-semibold">Número de teléfono</label>
-                    <input type="tel" id="chkTelefono" class="form-control form-control-sm" placeholder="Ej: 1135706071">
+                    <label class="form-label small fw-semibold text-white-50">Email</label>
+                    <input type="email" id="chkMail" class="form-control bg-dark text-white border-secondary" placeholder="tu@mail.com">
                 </div>
 
                 <div class="mb-3">
-                    <label class="form-label small fw-semibold">Código postal</label>
-                    <input type="text" id="chkCP" class="form-control form-control-sm" placeholder="Ej: 1876">
+                    <label class="form-label small fw-semibold text-white-50">Número de teléfono</label>
+                    <input type="tel" id="chkTelefono" class="form-control bg-dark text-white border-secondary" placeholder="Ej: 1135706071">
                 </div>
 
                 <div class="mb-3">
-                    <label class="form-label small fw-semibold">Dirección</label>
-                    <input type="text" id="chkDireccion" class="form-control form-control-sm" placeholder="Calle, número, piso/depto">
+                    <label class="form-label small fw-semibold text-white-50">Código postal</label>
+                    <input type="text" id="chkCP" class="form-control bg-dark text-white border-secondary" placeholder="Ej: 1876">
                 </div>
 
                 <div class="mb-3">
-                    <label class="form-label small fw-semibold">Como lo recibis?</label>
-                    <select class="form-select mb-3" id="chkEnvio">
+                    <label class="form-label small fw-semibold text-white-50">Dirección</label>
+                    <input type="text" id="chkDireccion" class="form-control bg-dark text-white border-secondary" placeholder="Calle, número, piso/depto">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label small fw-semibold text-white-50">¿Cómo lo recibís?</label>
+                    <select class="form-select bg-dark text-white border-secondary" id="chkEnvio">
                         <option value="">-- Seleccioná --</option>
                         <option value="Envío a domicilio">Envío a domicilio</option>
                         <option value="Retiro en persona">Retiro en persona</option>
                     </select>
                 </div>
 
-                <div class="mb-3">
-                    <label class="form-label small fw-semibold">Método de pago</label>
-                    <select id="chkPago" class="form-select form-select-sm">
+                <div class="mb-4">
+                    <label class="form-label small fw-semibold text-white-50">Método de pago</label>
+                    <select id="chkPago" class="form-select bg-dark text-white border-secondary">
                         <option value="">-- Seleccioná --</option>
                         <option value="Transferencia bancaria">Transferencia bancaria</option>
                         <option value="MercadoPago">MercadoPago</option>
@@ -198,10 +198,10 @@
                 </div>
 
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Volver</button>
-                <button type="button" class="btn btn-success" id="btnEnviarCompra">
-                    <i class="bi bi-whatsapp me-1"></i>Enviar compra por WhatsApp
+            <div class="modal-footer border-top border-secondary">
+                <button type="button" class="btn btn-outline-light btn-sm px-4" data-bs-dismiss="modal">Volver</button>
+                <button type="button" class="btn px-4" id="btnEnviarCompra" style="background-color: #cfa361; color: #1a1a1a; font-weight: 600;">
+                    <i class="bi bi-whatsapp me-2"></i>Enviar pedido
                 </button>
             </div>
         </div>
@@ -216,8 +216,8 @@
             <div class="modal-body py-5 px-4">
                 <div style="font-size:4rem">🧉</div>
                 <h4 class="fw-bold mt-3 mb-2">¡Pedido enviado!</h4>
-                <p class="text-muted mb-1">Te redirigimos a WhatsApp para que el vendedor reciba tu orden.</p>
-                <p class="text-muted small mb-4">En breve te van a contactar para coordinar la entrega.</p>
+                <p class="text-white mb-1">Te redirigimos a WhatsApp para que el vendedor reciba tu orden.</p>
+                <p class="text-white small mb-4">En breve te van a contactar para coordinar la entrega.</p>
                 <button type="button" class="btn btn-dark px-4" data-bs-dismiss="modal">
                     Volver a la tienda
                 </button>

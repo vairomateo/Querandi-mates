@@ -185,7 +185,7 @@ a {
             font-size: 0.9rem;
             line-height: 1.5;
             display: -webkit-box;
-            -webkit-line-clamp: 2;
+            line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
@@ -346,35 +346,42 @@ a {
     }
 }
 
-/* Eliminar fondo blanco y ajustar colores del checkout */
-#modalCheckout .modal-content {
-    background-color: #1a1a1a !important; /* Fondo oscuro */
-    color: #ffffff !important;
-    border: 1px solid #cfa361; /* Borde dorado */
+/* =========================================
+   DISEÑO PREMIUM PARA EL CHECKOUT
+   ========================================= */
+#modalCheckout {
+    
+    /* Mantiene tus labels perfectos arriba del input */
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 600;
+        color: #ffffff !important;
+    }
+
+    /* Inputs Y DESPLEGABLES oscuros (Agregamos .form-select) */
+    .form-control, .form-select {
+        background-color: #2d2d2d !important;
+        border: 1px solid #444 !important;
+        color: #ffffff !important;
+
+        /* Estilo elegante cuando hacés clic para escribir */
+        &:focus {
+            background-color: #2d2d2d !important;
+            border-color: #cfa361 !important;
+            color: #ffffff !important;
+            box-shadow: 0 0 0 0.25rem rgba(207, 163, 97, 0.25) !important;
+        }
+    }
+
+    /* Opacidad para los textos de ejemplo (placeholder) */
+    .form-control::placeholder {
+        color: #6c757d;
+        opacity: 0.7;
+    }
 }
 
-/* Contenedor del resumen de productos */
-#checkoutResumen {
-    background-color: transparent !important; /* Quita el recuadro blanco */
-    border: none !important;
-}
-
-/* Labels arriba de los inputs */
-#modalCheckout label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 600;
-    color: #ffffff !important;
-}
-
-/* Inputs oscuros para mantener la estética */
-#modalCheckout .form-control {
-    background-color: #2d2d2d !important;
-    border: 1px solid #444 !important;
-    color: #ffffff !important;
-}
-
-/* Asegurar que el total sea dorado y no verde */
+/* Mantiene tu total dorado impecable */
 #checkoutTotal {
     color: #cfa361 !important;
     font-size: 1.5rem;

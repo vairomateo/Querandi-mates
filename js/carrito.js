@@ -94,7 +94,7 @@ function renderizarCarrito() {
 
     if (carrito.length === 0) {
         container.innerHTML = `
-            <div class="text-center py-4 text-muted">
+            <div class="text-center py-4 text-white-50">
                 <i class="bi bi-cart-x fs-1"></i>
                 <p class="mt-2">Tu carrito está vacío</p>
             </div>`;
@@ -134,7 +134,6 @@ function renderizarCarrito() {
 
 // ==================== UI - CHECKOUT ====================
 
-// Reemplaza esta sección en tu archivo carrito.js
 function abrirCheckout() {
     const instancia = bootstrap.Modal.getInstance(document.getElementById('modalCarrito'));
     if (instancia) instancia.hide();
@@ -142,15 +141,15 @@ function abrirCheckout() {
     const resumen = document.getElementById('checkoutResumen');
     const totalEl = document.getElementById('checkoutTotal');
 
-    // Estructura mejorada: imagen, nombre/cantidad y precio a la derecha
+    // ACÁ ESTÁ EL BLOQUE NUEVO QUE ME PREGUNTABAS:
     if (resumen) resumen.innerHTML = carrito.map(i => `
-        <div class="d-flex align-items-center gap-3 py-2 border-bottom border-secondary">
-            ${i.imagen ? `<img src="${i.imagen}" width="50" height="50" style="object-fit:cover;border-radius:8px;border: 1px solid #cfa361;">` : ''}
+        <div class="d-flex align-items-center gap-3 py-3 border-bottom border-secondary">
+            ${i.imagen ? `<img src="${i.imagen}" width="48" height="48" style="object-fit:cover; border-radius:8px; border: 1px solid #444;">` : ''}
             <div class="flex-grow-1">
-                <div class="text-white fw-bold">${i.nombre}</div>
-                <div class="text-white-50 small">Cant: ${i.cantidad}</div>
+                <div class="text-white fw-bold mb-1">${i.nombre}</div>
+                <span class="badge bg-dark border border-secondary text-white-50">Cant: ${i.cantidad}</span>
             </div>
-            <div class="fw-bold" style="color: #cfa361;">$${(i.precio * i.cantidad).toLocaleString('es-AR')}</div>
+            <div class="fw-bold" style="color: #cfa361; font-size: 1.1rem;">$${(i.precio * i.cantidad).toLocaleString('es-AR')}</div>
         </div>`
     ).join('');
 
