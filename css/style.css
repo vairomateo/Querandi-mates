@@ -496,37 +496,56 @@ footer .footer-nav-link:hover {
   border-color: #6F4E37 !important;
 }
 
+.titulo-premium {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: #1A1A1A;
+}
+
+.subtitulo-premium {
+  font-size: 1.05rem;
+  color: #5C5C5C;
+}
+
 .separador-querandi {
-  width: 25%;
+  width: 80px;
   border-color: #6F4E37 !important;
   border-width: 3px !important;
   opacity: 1;
+  border-radius: 2px;
 }
 
 .separador-querandi-corto {
-  width: 60px;
+  width: 45px;
   border-color: #6F4E37 !important;
   border-width: 3px !important;
   opacity: 1;
+  border-radius: 2px;
 }
 
 .hero-grabados {
-  background: linear-gradient(135deg, #1A1A1A 0%, #4B3221 100%);
-  padding: 90px 0 70px;
+  background: linear-gradient(135deg, #1c1a17 0%, #2e241c 100%);
+  padding: 100px 0 80px;
   color: #FFFFFF;
 }
 .hero-grabados h1 {
-  font-size: 3.2rem;
+  font-family: "Playfair Display", serif;
+  font-size: 3.4rem;
   font-weight: 700;
   line-height: 1.15;
+  letter-spacing: -0.5px;
 }
 .hero-grabados p {
   font-size: 1.15rem;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
 }
 @media (max-width: 576px) {
+  .hero-grabados {
+    padding: 60px 0;
+  }
   .hero-grabados h1 {
-    font-size: 2.1rem;
+    font-size: 2.3rem;
   }
   .hero-grabados p {
     font-size: 1rem;
@@ -534,11 +553,13 @@ footer .footer-nav-link:hover {
 }
 
 .badge-laser {
-  background-color: #6F4E37;
-  color: #FFFFFF;
-  font-size: 0.8rem;
-  padding: 5px 12px;
-  border-radius: 20px;
+  background-color: rgba(111, 78, 55, 0.15);
+  color: #6F4E37;
+  border: 1px solid rgba(111, 78, 55, 0.3);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 30px;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -547,64 +568,76 @@ footer .footer-nav-link:hover {
   max-height: 380px;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 10px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
 }
 
 .seccion-materiales,
 .seccion-galeria {
-  padding: 70px 0;
-  background-color: #F5F1EB;
+  padding: 90px 0;
+  background-color: #fcfbfa;
 }
 
 .seccion-precios {
-  padding: 70px 0;
+  padding: 90px 0;
   background-color: #FFFFFF;
 }
 
 .material-card {
   background: #FFFFFF;
   border-radius: 16px;
-  padding: 32px 24px;
+  padding: 35px 20px;
   text-align: center;
-  border: 1px solid #E5DDD5;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: 1px solid #e8e4d8;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   height: 100%;
 }
 .material-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border-color: #6F4E37;
+  box-shadow: 0 12px 30px rgba(207, 163, 97, 0.12);
+}
+.material-card:hover .icono {
+  transform: scale(1.1);
+  color: #4B3221;
 }
 .material-card .icono {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   color: #6F4E37;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
+  transition: transform 0.3s ease;
 }
 .material-card h5 {
+  font-family: "Playfair Display", serif;
   font-weight: 700;
   color: #1A1A1A;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  font-size: 1.15rem;
 }
 .material-card p {
-  font-size: 0.9rem;
-  color: #5C5C5C;
+  font-size: 0.88rem;
+  color: #666;
   margin: 0;
+  line-height: 1.4;
 }
 
 .seccion-pasos {
-  background-color: #1A1A1A;
+  background-color: #161513;
   color: #FFFFFF;
-  padding: 70px 0;
+  padding: 90px 0;
 }
 
 .pasos-descripcion {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .paso {
   display: flex;
   align-items: flex-start;
-  gap: 20px;
+  gap: 24px;
   margin-bottom: 36px;
 }
 .paso:last-child {
@@ -612,114 +645,146 @@ footer .footer-nav-link:hover {
 }
 
 .paso-numero {
-  width: 52px;
-  height: 52px;
-  min-width: 52px;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
   border-radius: 50%;
-  background-color: #6F4E37;
+  background: linear-gradient(135deg, #6F4E37 0%, #4B3221 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(207, 163, 97, 0.3);
 }
 
 .paso-texto h5 {
-  font-weight: 700;
-  margin-bottom: 4px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
   color: #FFFFFF;
 }
 .paso-texto p {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.6);
   font-size: 0.95rem;
   margin: 0;
+  line-height: 1.5;
+}
+
+.galeria-wrapper {
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+  background-color: #f0ebe1;
 }
 
 .galeria-img {
   width: 100%;
-  height: 260px;
+  height: 280px;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 14px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition: transform 0.5s ease, filter 0.3s ease;
   cursor: pointer;
 }
 .galeria-img:hover {
-  transform: scale(1.04);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+  transform: scale(1.06);
 }
 
-.galeria-placeholder {
-  background: #E5DDD5;
-  border-radius: 14px;
-  height: 260px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #6F4E37;
-  font-size: 0.95rem;
-  font-weight: 600;
-  border: 2px dashed #6F4E37;
+.link-insta {
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
-.galeria-placeholder i {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+.link-insta:hover {
+  color: #4B3221;
 }
 
 .precio-card {
   background: #FFFFFF;
-  border-radius: 16px;
-  border: 2px solid #E5DDD5;
-  padding: 32px 24px;
+  border-radius: 20px;
+  border: 1px solid #e8e4d8;
+  padding: 40px 24px;
   text-align: center;
-  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+  transition: all 0.3s ease;
   height: 100%;
+  position: relative;
 }
 .precio-card:hover {
   border-color: #6F4E37;
-  box-shadow: 0 8px 24px rgba(111, 78, 55, 0.12);
+  box-shadow: 0 15px 35px rgba(111, 78, 55, 0.08);
+  transform: translateY(-4px);
 }
-.precio-card .precio-valor {
-  font-size: 1.8rem;
-  font-weight: 700;
+.precio-card.highlight {
+  border: 1px dashed #6F4E37;
+  background-color: #fffdf9;
+}
+.precio-card .precio-icon-box {
+  width: 60px;
+  height: 60px;
+  background-color: #fdfaf4;
   color: #6F4E37;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
 }
 .precio-card h5 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 14px;
+  font-size: 1.2rem;
+}
+.precio-card .precio-valor {
+  font-size: 1.9rem;
   font-weight: 700;
   color: #1A1A1A;
   margin-bottom: 12px;
 }
+.precio-card .precio-valor span {
+  font-size: 0.85rem;
+  color: #888;
+  font-weight: 400;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: -2px;
+}
 .precio-card p {
   font-size: 0.9rem;
-  color: #5C5C5C;
+  line-height: 1.5;
+  margin: 0;
 }
 
 .cta-grabados {
-  background: linear-gradient(135deg, #4B3221 0%, #6F4E37 100%);
+  background: linear-gradient(135deg, #2e241c 0%, #1c1a17 100%);
   color: #FFFFFF;
-  padding: 70px 0;
+  padding: 85px 0;
   text-align: center;
+  border-top: 1px solid rgba(111, 78, 55, 0.2);
 }
 .cta-grabados h2 {
-  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+  font-size: 2.4rem;
   font-weight: 700;
 }
 .cta-grabados p {
-  font-size: 1.05rem;
-  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
 }
 
 .btn-wa {
   background-color: #25D366;
   color: #FFFFFF;
   border: none;
-  padding: 14px 36px;
+  padding: 15px 38px;
   border-radius: 50px;
   font-weight: 600;
   font-size: 1rem;
-  transition: 0.4s ease;
+  transition: all 0.3s ease;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -728,31 +793,64 @@ footer .footer-nav-link:hover {
 .btn-wa:hover {
   background-color: #1ebe5b;
   transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.25) !important;
   color: #FFFFFF;
 }
 
-.duda {
-  padding: 1rem;
-  border: 1px solid #E5DDD5;
-  border-radius: 0.5rem;
-  margin-bottom: 1rem;
-  background-color: #1A1A1A;
-  transition: background-color 0.4s ease;
+/* ==========================================================================
+   ESTILOS PREMIUM PARA PREGUNTAS FRECUENTES
+   ========================================================================== */
+.faq-section .accordion-item {
+  border: 1px solid #e8e4d8 !important;
+  background-color: #ffffff !important;
+  border-radius: 12px !important;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
-.duda:hover {
-  background-color: rgb(38.75, 38.75, 38.75);
+.faq-section .accordion-item:hover {
+  border-color: #cfa361 !important;
+  transform: translateY(-2px);
 }
-.duda__summary {
-  cursor: pointer;
+.faq-section .accordion-button {
+  background-color: #ffffff !important;
+  color: #2d2d2d !important;
   font-weight: 600;
+  font-size: 1.05rem;
+  padding: 20px 24px;
+  box-shadow: none !important;
 }
-
-.pagos__icons {
-  margin-top: 10px;
-  display: flex;
+.faq-section .accordion-button .faq-icon-wrapper {
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-  gap: 20px;
-  height: 30px;
+  width: 34px;
+  height: 34px;
+  background-color: #f5f2eb;
+  color: #cfa361;
+  border-radius: 50%;
+  margin-right: 14px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+.faq-section .accordion-button::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23cfa361'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+  background-size: 1.1rem;
+}
+.faq-section .accordion-button:not(.collapsed) {
+  background-color: #fdfcf8 !important;
+  color: #cfa361 !important;
+}
+.faq-section .accordion-button:not(.collapsed) .faq-icon-wrapper {
+  background-color: #cfa361;
+  color: #ffffff;
+}
+.faq-section .accordion-body {
+  background-color: #ffffff;
+  color: #555555 !important;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding: 0px 24px 24px 72px; /* Alineado perfecto abajo del texto del título, salteando el ícono */
+  border-top: none !important;
 }
 
 @media (max-width: 992px) {

@@ -1,55 +1,74 @@
 // ==========================================
-// GRABADOS
+// GRABADOS - REDISEÑO BOUTIQUE PREMIUM
 // ==========================================
 
-// Utilidades de color
+// Utilidades de color y tipografía base
 .text-querandi   { color: $color-principal; }
 .border-querandi { border-color: $color-principal !important; }
 
-// Separadores
+.titulo-premium {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: $color-negro;
+}
+
+.subtitulo-premium {
+    font-size: 1.05rem;
+    color: $color-gris;
+}
+
+// Separadores estilizados
 .separador-querandi {
-    width: 25%;
+    width: 80px;
     border-color: $color-principal !important;
     border-width: 3px !important;
     opacity: 1;
+    border-radius: 2px;
 }
 
 .separador-querandi-corto {
-    width: 60px;
+    width: 45px;
     border-color: $color-principal !important;
     border-width: 3px !important;
     opacity: 1;
+    border-radius: 2px;
 }
 
-// ── Hero
+// ── Hero Section
 .hero-grabados {
-    background: linear-gradient(135deg, $color-negro 0%, $color-principal-dark 100%);
-    padding: 90px 0 70px;
+    background: linear-gradient(135deg, #1c1a17 0%, #2e241c 100%);
+    padding: 100px 0 80px;
     color: $color-blanco;
 
     h1 {
-        font-size: 3.2rem;
+        font-family: 'Playfair Display', serif;
+        font-size: 3.4rem;
         font-weight: 700;
         line-height: 1.15;
+        letter-spacing: -0.5px;
     }
 
     p {
         font-size: 1.15rem;
-        color: rgba(255, 255, 255, 0.85);
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.6;
     }
 
     @include mobile {
-        h1 { font-size: 2.1rem; }
+        padding: 60px 0;
+        h1 { font-size: 2.3rem; }
         p  { font-size: 1rem; }
     }
 }
 
 .badge-laser {
-    background-color: $color-principal;
-    color: $color-blanco;
-    font-size: 0.8rem;
-    padding: 5px 12px;
-    border-radius: 20px;
+    background-color: rgba($color-principal, 0.15);
+    color: $color-principal;
+    border: 1px solid rgba($color-principal, 0.3);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 30px;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
@@ -57,179 +76,242 @@
 .video-hero {
     max-height: 380px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
 }
 
-// ── Secciones con fondo
+// ── Contenedores de Secciones
 .seccion-materiales,
-.seccion-galeria { padding: 70px 0; background-color: $color-fondo; }
+.seccion-galeria { 
+    padding: 90px 0; 
+    background-color: #fcfbfa; 
+}
 
-.seccion-precios { padding: 70px 0; background-color: $color-blanco; }
+.seccion-precios { 
+    padding: 90px 0; 
+    background-color: $color-blanco; 
+}
 
-// ── Materiales
+// ── Tarjetas de Materiales
 .material-card {
     background: $color-blanco;
     border-radius: 16px;
-    padding: 32px 24px;
+    padding: 35px 20px;
     text-align: center;
-    border: 1px solid $color-borde;
-    transition: transform $transicion, box-shadow $transicion;
+    border: 1px solid #e8e4d8;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     height: 100%;
 
     &:hover {
         transform: translateY(-6px);
-        box-shadow: $sombra-suave;
+        border-color: $color-principal;
+        box-shadow: 0 12px 30px rgba(207, 163, 97, 0.12);
+
+        .icono {
+            transform: scale(1.1);
+            color: $color-principal-dark;
+        }
     }
 
     .icono {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
         color: $color-principal;
-        margin-bottom: 14px;
+        margin-bottom: 16px;
+        transition: transform 0.3s ease;
     }
 
     h5 {
+        font-family: 'Playfair Display', serif;
         font-weight: 700;
         color: $color-negro;
-        margin-bottom: 8px;
+        margin-bottom: 10px;
+        font-size: 1.15rem;
     }
 
     p {
-        font-size: 0.9rem;
-        color: $color-gris;
+        font-size: 0.88rem;
+        color: #666;
         margin: 0;
+        line-height: 1.4;
     }
 }
 
-// ── Pasos
+// ── Línea de Pasos Proceso
 .seccion-pasos {
-    background-color: $color-negro;
+    background-color: #161513;
     color: $color-blanco;
-    padding: 70px 0;
+    padding: 90px 0;
 }
 
 .pasos-descripcion {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 .paso {
     display: flex;
     align-items: flex-start;
-    gap: 20px;
+    gap: 24px;
     margin-bottom: 36px;
 
     &:last-child { margin-bottom: 0; }
 }
 
 .paso-numero {
-    width: 52px;
-    height: 52px;
-    min-width: 52px;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
     border-radius: 50%;
-    background-color: $color-principal;
+    background: linear-gradient(135deg, $color-principal 0%, $color-principal-dark 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: $color-blanco;
+    box-shadow: 0 4px 15px rgba(207, 163, 97, 0.3);
 }
 
 .paso-texto {
     h5 {
-        font-weight: 700;
-        margin-bottom: 4px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 6px;
         color: $color-blanco;
     }
     p {
-        color: rgba(255, 255, 255, 0.7);
+        color: rgba(255, 255, 255, 0.6);
         font-size: 0.95rem;
+        margin: 0;
+        line-height: 1.5;
+    }
+}
+
+// ── Galería de Fotos Rediseñada
+.galeria-wrapper {
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.04);
+    background-color: #f0ebe1;
+}
+
+.galeria-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.5s ease, filter 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.06);
+    }
+}
+
+.link-insta {
+    text-decoration: none;
+    transition: color 0.3s ease;
+    &:hover { color: $color-principal-dark; }
+}
+
+// ── Lista Tarifaria Premium
+.precio-card {
+    background: $color-blanco;
+    border-radius: 20px;
+    border: 1px solid #e8e4d8;
+    padding: 40px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%;
+    position: relative;
+
+    &:hover {
+        border-color: $color-principal;
+        box-shadow: 0 15px 35px rgba(111, 78, 55, 0.08);
+        transform: translateY(-4px);
+    }
+
+    &.highlight {
+        border: 1px dashed $color-principal;
+        background-color: #fffdf9;
+    }
+
+    .precio-icon-box {
+        width: 60px;
+        height: 60px;
+        background-color: #fdfaf4;
+        color: $color-principal;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    h5 {
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        color: $color-negro;
+        margin-bottom: 14px;
+        font-size: 1.2rem;
+    }
+
+    .precio-valor {
+        font-size: 1.9rem;
+        font-weight: 700;
+        color: $color-negro;
+        margin-bottom: 12px;
+
+        span {
+            font-size: 0.85rem;
+            color: #888;
+            font-weight: 400;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: -2px;
+        }
+    }
+
+    p { 
+        font-size: 0.9rem; 
+        line-height: 1.5;
         margin: 0;
     }
 }
 
-// ── Galería
-.galeria-img {
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-    border-radius: 14px;
-    transition: transform $transicion, box-shadow $transicion;
-    cursor: pointer;
-
-    &:hover {
-        transform: scale(1.04);
-        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
-    }
-}
-
-.galeria-placeholder {
-    background: $color-borde;
-    border-radius: 14px;
-    height: 260px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: $color-principal;
-    font-size: 0.95rem;
-    font-weight: 600;
-    border: 2px dashed $color-principal;
-
-    i { font-size: 2.5rem; margin-bottom: 10px; }
-}
-
-// ── Precios
-.precio-card {
-    background: $color-blanco;
-    border-radius: 16px;
-    border: 2px solid $color-borde;
-    padding: 32px 24px;
-    text-align: center;
-    transition: border-color $transicion, box-shadow $transicion;
-    height: 100%;
-
-    &:hover {
-        border-color: $color-principal;
-        box-shadow: 0 8px 24px rgba(111, 78, 55, 0.12);
-    }
-
-    .precio-valor {
-        font-size: 1.8rem;
-        font-weight: 700;
-        color: $color-principal;
-    }
-
-    h5 {
-        font-weight: 700;
-        color: $color-negro;
-        margin-bottom: 12px;
-    }
-
-    p { font-size: 0.9rem; color: $color-gris; }
-}
-
-// ── CTA
+// ── Bloque Call To Action (WhatsApp)
 .cta-grabados {
-    background: linear-gradient(135deg, $color-principal-dark 0%, $color-principal 100%);
+    background: linear-gradient(135deg, #2e241c 0%, #1c1a17 100%);
     color: $color-blanco;
-    padding: 70px 0;
+    padding: 85px 0;
     text-align: center;
+    border-top: 1px solid rgba($color-principal, 0.2);
 
-    h2 { font-size: 2rem; font-weight: 700; }
-    p  { font-size: 1.05rem; color: rgba(255, 255, 255, 0.85); }
+    h2 { 
+        font-family: 'Playfair Display', serif;
+        font-size: 2.4rem; 
+        font-weight: 700; 
+    }
+    p  { 
+        font-size: 1.1rem; 
+        color: rgba(255, 255, 255, 0.75); 
+        line-height: 1.6;
+    }
 }
 
-// ── Botón WhatsApp
+// ── Botón WhatsApp Universal
 .btn-wa {
     background-color: #25D366;
     color: $color-blanco;
     border: none;
-    padding: 14px 36px;
+    padding: 15px 38px;
     border-radius: 50px;
     font-weight: 600;
     font-size: 1rem;
-    transition: $transicion;
+    transition: all 0.3s ease;
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -238,6 +320,7 @@
     &:hover {
         background-color: #1ebe5b;
         transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(37, 211, 102, 0.25) !important;
         color: $color-blanco;
     }
 }

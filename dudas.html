@@ -53,7 +53,8 @@
     </nav>
 </header>
 
-    <main class="container my-5">
+    <!-- ❓ SECCIÓN PREGUNTAS FRECUENTES (Actualizada con .faq-section) -->
+    <main class="faq-section container my-5">
     <h1 class="text-center mb-2 display-5 fw-bold">Preguntas Frecuentes</h1>
     
     <div class="d-flex justify-content-center mb-5">
@@ -66,66 +67,70 @@
             
             <div class="accordion" id="faqAccordion">
                 
+                <!-- Pregunta 1 -->
                 <div class="accordion-item shadow-sm mb-3">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                            <i class="bi bi-patch-question-fill me-2 text-dark"></i> ¿Cómo curar el mate?
+                            <span class="faq-icon-wrapper"><i class="bi bi-patch-question-fill"></i></span> ¿Cómo curar el mate?
                         </button>
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                            <p>Para curar un mate de calabaza, llenalo con yerba usada y agua caliente, dejalo reposar 24 horas, luego raspá el interior suavemente y repetí el proceso dos o tres veces.</p>
-                            <p>El de algarrobo no necesita curado tradicional, pero podés frotarlo con aceite comestible para sellar los poros y realzar el sabor.</p>
+                            <p><strong>Cómo curar un mate de calabaza : </strong>Antes del primer uso, llenalo con yerba usada y agua tibia. Dejalo reposar 24 horas, retirás la yerba, raspás suavemente el interior y enjuagalo. Luego, dejalo secar boca arriba en un lugar ventilado. ¡Ya está listo para disfrutar!</p>
+                            <p class="mb-0"><strong>Cómo curar un mate de algarrobo : </strong>Antes del primer uso, aplicá una fina capa de aceite vegetal en el interior y dejalo actuar unas horas. Retirá el excedente y listo. Después de cada uso, enjuagalo, secá el exceso de agua y dejalo ventilar para conservar la madera en óptimas condiciones.</p>
                         </div>
                     </div>
                 </div>
 
+                <!-- Pregunta 2 -->
                 <div class="accordion-item shadow-sm mb-3">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            <i class="bi bi-bag-fill me-2 text-dark"></i> ¿Qué tipo de yerba recomiendan?
+                            <span class="faq-icon-wrapper"><i class="bi bi-bag-fill"></i></span> ¿Qué tipo de yerba recomiendan?
                         </button>
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                            <dl class="row">
+                            <dl class="row mb-0">
                                 <dt class="col-sm-3 fw-bold">Canarias (sin palo)</dt>
-                                <dd class="col-sm-9">Uruguaya, intensa y amarga, ideal para quienes buscan un sabor fuerte y duradero. No tiene palo, lo que la hace más concentrada.</dd>
+                                <dd class="col-sm-9 text-muted">Uruguaya, intensa y amarga, ideal para quienes buscan un sabor fuerte y duradero. No tiene palo, lo que la hace más concentrada.</dd>
                                 
                                 <dt class="col-sm-3 fw-bold">Amanda Suave</dt>
-                                <dd class="col-sm-9">Argentina, con un sabor delicado y equilibrado, perfecta para quienes recién empiezan o prefieren algo más liviano.</dd>
+                                <dd class="col-sm-9 text-muted">Argentina, con un sabor delicado y equilibrado, perfecta para quienes recién empiezan o prefieren algo más liviano.</dd>
                                 
                                 <dt class="col-sm-3 fw-bold">La Merced Barbacuá</dt>
-                                <dd class="col-sm-9">Sabor neutro y ahumado, ni muy fuerte ni muy suave, excelente para compartir en rondas largas sin saturar el paladar.</dd>
+                                <dd class="col-sm-9 text-muted mb-0">Sabor neutro y ahumado, ni muy fuerte ni muy suave, excelente para compartir en rondas largas sin saturar el paladar.</dd>
                             </dl>
                         </div>
                     </div>
                 </div>
 
+                <!-- Pregunta 3 -->
                 <div class="accordion-item shadow-sm mb-3">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            <i class="bi bi-truck me-2 text-dark"></i> ¿Hacen envíos?
+                            <span class="faq-icon-wrapper"><i class="bi bi-truck"></i></span> ¿Hacen envíos?
                         </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
                             <p>Sí, realizamos envíos a todo el país a través de Correo Argentino, asegurando cobertura nacional y seguimiento del paquete. También contamos con opciones de mensajería privada según tu ubicación, para mayor comodidad. Los tiempos de entrega pueden variar, pero siempre te mantenemos informado. Tu pedido viaja seguro y llega a donde estés.</p>
-                            <a href="https://wa.me/5491135706071" class="btn btn-sm btn-outline-querandi mt-2">Consultar costos de envío exactos</a>
+                            <a href="https://wa.me/5491135706071" class="btn btn-sm btn-outline-gold mt-2">Consultar costos de envío exactos</a>
                         </div>
                     </div>
                 </div>
                 
+                <!-- Pregunta 4 -->
                 <div class="accordion-item shadow-sm mb-3">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                            <i class="bi bi-credit-card me-2 text-dark"></i> ¿Qué métodos de pago aceptan?
+                            <span class="faq-icon-wrapper"><i class="bi bi-credit-card"></i></span> ¿Qué métodos de pago aceptan?
                         </button>
                     </h2>
                     <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
                             <p>Aceptamos Mercado Pago, tarjetas de crédito/débito y transferencias bancarias.</p>
-                            <div class="pagos__icons d-flex gap-3 align-items-center">
+                            <div class="pagos__icons d-flex gap-3 align-items-center mt-3">
                                 <img src="./imagenes/visa.png" alt="Visa" style="max-height: 25px;" />
                                 <img src="./imagenes/mastercard.png" alt="Mastercard" style="max-height: 25px;" />
                                 <img src="./imagenes/mercadopago.png" alt="Mercado Pago" style="max-height: 35px;" />
@@ -134,15 +139,16 @@
                     </div>
                 </div>
                 
+                <!-- Pregunta 5 -->
                 <div class="accordion-item shadow-sm mb-3">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            <i class="bi bi-droplet-half me-2 text-dark"></i> ¿Cómo limpiar y mantener el mate?
+                            <span class="faq-icon-wrapper"><i class="bi bi-droplet-half"></i></span> ¿Cómo limpiar y mantener el mate?
                         </button>
                     </h2>
                     <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                            <p>Enjuagalo con agua caliente sin usar detergente. Para mates de calabaza, secá bien el interior después de cada uso y guardalo boca arriba para evitar hongos.</p>
+                            <p class="mb-0">Enjuagalo con agua caliente sin usar detergente. Para mates de calabaza, secá bien el interior después de cada uso y guardalo boca arriba para evitar hongos.</p>
                         </div>
                     </div>
                 </div>
