@@ -14,11 +14,27 @@
         color: $color-blanco;
         font-weight: 500;
         transition: $transicion;
+        position: relative;
+        padding-bottom: 5px;
 
         &:hover {
             color: $color-principal;
         }
     }
+
+    .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0px;
+    height: 2px;
+    background: var(--color-primary);
+    transition: var(--transition-base);
+}
+.nav-link:hover::after {
+    width: 100%;
+}
 }
 
 .logo-nav {

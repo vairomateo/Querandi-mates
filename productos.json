@@ -1,84 +1,114 @@
 {
     "productos": [
-    {
-    "id": 1,
-    "nombre": "Mate Camionero",
-    "categoria": "mates",
-    "precio": 35000,
-    "stock": 10,
-    "descripcion": "Mate artesanal forrado en cuero.",
-    "imagen": "./imagenes/mate-camionero.jpeg",
-    "oferta": true
-    },
-    {
-    "id": 2,
-    "nombre": "Rei Verde",
-    "categoria": "yerbas",
-    "precio": 11500,
-    "stock": 3,
-    "descripcion": "Yerba suave y equilibrada.",
-    "imagen": "./imagenes/yerba-rei-verde.png",
-    "oferta": false
-    },
-    {
-    "id": 3,
-    "nombre": "Bombilla Pico Loro",
-    "categoria": "otros",
-    "precio": 9000,
-    "stock": 1,
-    "descripcion": "Bombilla de acero inoxidable.",
-    "imagen": "./imagenes/bombillon.jpg",
-    "oferta": false
-    },
-    {
-    "id": 4,
-    "nombre": "Mate Imperial",
-    "categoria": "mates",
-    "precio": 25000,
-    "stock": 0,
-    "descripcion": "Mate premium con virola de alpaca.",
-    "imagen": "./imagenes/mate-imperial.jpeg",
-    "oferta": true
-    },
-    {
-    "id": 5,
-    "nombre": "Baldo",
-    "categoria": "yerbas",
-    "precio": 10000,
-    "stock": 5,
-    "descripcion": "Yerba suave y equilibrada.",
-    "imagen": "./imagenes/yerba-baldo.png",
-    "oferta": true
-    },
-    {
-    "id": 6,
-    "nombre": "Mate criollo",
-    "categoria": "mates",
-    "precio": 25000,
-    "stock": 3,
-    "descripcion": "Mate artesnal.",
-    "imagen": "./imagenes/mate-criollo.jpeg",
-    "oferta": false
-    },
-    {
-    "id": 7,
-    "nombre": "Canarias",
-    "categoria": "yerbas",
-    "precio": 11000,
-    "stock": 7,
-    "descripcion": "Yerba suave y equilibrada.",
-    "imagen": "./imagenes/yerba-canarias.png",
-    "oferta": false
-    },
-    {
-    "id": 8,
-    "nombre": "Termo Stanley 800ml negro",
-    "categoria": "otros",
-    "precio": 100000,
-    "stock": 9,
-    "descripcion": "Termo stanley original.",
-    "imagen": "./imagenes/termo-stanley-negro-800ml.jpg",
-    "oferta": false
-    }
+        {
+            "id": 1,
+            "nombre": "Mate Imperial",
+            "categoria": "mates",
+            "precio": 35000,
+            "stock": 10,
+            "descripcion": "Calabaza natural con terminaciones en alpaca. La máxima expresión de elegancia.",
+            "imagen": "./imagenes/mate_imperial_negro.png",
+            "oferta": true
+        },
+        {
+            "id": 2,
+            "nombre": "Rei Verde",
+            "categoria": "yerbas",
+            "precio": 11500,
+            "stock": 3,
+            "descripcion": "Yerba premium con blend especial de hierbas.",
+            "imagen": "./imagenes/yerba-rei-verde.png",
+            "oferta": false
+        },
+        {
+            "id": 3,
+            "nombre": "Bombillon",
+            "categoria": "bombillas",
+            "precio": 9000,
+            "stock": 1,
+            "descripcion": "Bombilla de acero inoxidable.",
+            "imagen": "./imagenes/bombillon_premium.png",
+            "oferta": false
+        },
+        {
+            "id": 4,
+            "nombre": "Mate Imperial con base",
+            "categoria": "mates",
+            "precio": 25000,
+            "stock": 0,
+            "descripcion": "Mate premium con virola de alpaca. Robusto y práctico, con base reforzada. Perfecto para el día a día.",
+            "imagen": "./imagenes/mate_imperial_con_base.png",
+            "oferta": false
+        },
+        {
+            "id": 5,
+            "nombre": "Baldo",
+            "categoria": "yerbas",
+            "precio": 10000,
+            "stock": 5,
+            "descripcion": "Yerba tradicional de sabor intenso y cuerpo lleno.",
+            "imagen": "./imagenes/yerba-baldo.png",
+            "oferta": true
+        },
+        {
+            "id": 6,
+            "nombre": "Mate Ranchero",
+            "categoria": "mates",
+            "precio": 25000,
+            "stock": 3,
+            "descripcion": "Diseño rústico de boca ancha, ideal para una cebada cómoda y duradera.",
+            "imagen": "./imagenes/mate_ranchero.png",
+            "oferta": false
+        },
+        {
+            "id": 7,
+            "nombre": "Canarias",
+            "categoria": "yerbas",
+            "precio": 11000,
+            "stock": 7,
+            "descripcion": "Yerba suave con notas herbales y baja acidez.",
+            "imagen": "./imagenes/yerba-canarias.png",
+            "oferta": false
+        },
+        {
+            "id": 8,
+            "nombre": "Termo Metalico",
+            "categoria": "termos",
+            "precio": 100000,
+            "stock": 2,
+            "descripcion": "Diseño rústico de boca ancha, ideal para una cebada cómoda y duradera.",
+            "imagen": "./imagenes/termo_metalico.png",
+            "oferta": false
+        },
+        {
+            "id": 9,
+            "nombre": "Termo Negro",
+            "categoria": "termos",
+            "precio": 100000,
+            "stock": 2,
+            "descripcion": "Diseño rústico de boca ancha, ideal para una cebada cómoda y duradera.",
+            "imagen": "./imagenes/termo_negro.png",
+            "oferta": false
+        },
+        {
+            "id": 10,
+            "nombre": "Mate Imperial de Algarrobo",
+            "categoria": "mates",
+            "precio": 35000,
+            "stock": 2,
+            "descripcion": "Diseño rústico de boca ancha, ideal para una cebada cómoda y duradera.",
+            "imagen": "./imagenes/imperial_algarrobo.png",
+            "oferta": false
+        },
+        {
+            "id": 11,
+            "nombre": "Mate Torpedo",
+            "categoria": "mates",
+            "precio": 40000,
+            "stock": 2,
+            "descripcion": "Diseño rústico de boca ancha, ideal para una cebada cómoda y duradera.",
+            "imagen": "./imagenes/mate_torpedo_negro.png",
+            "oferta": false
+        }
     ]
 }
