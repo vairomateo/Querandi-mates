@@ -109,6 +109,16 @@
             "descripcion": "Diseño rústico de boca ancha, ideal para una cebada cómoda y duradera.",
             "imagen": "./imagenes/mate_torpedo_negro.png",
             "oferta": false
+        },
+        {
+            "id": 12,
+            "nombre": "Mate Torpedo",
+            "categoria": "mates",
+            "precio": 40000,
+            "stock": 2,
+            "descripcion": "Diseño rústico de boca ancha, ideal para una cebada cómoda y duradera.",
+            "imagen": "./imagenes/mate_torpedo_negro.png",
+            "oferta": false
         }
     ]
 }
